@@ -4,8 +4,10 @@
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {},
     "ghcr.io/devcontainers/features/aws-cli:1": {},
-    "ghcr.io/devcontainers/features/terraform:1": {}
+    "ghcr.io/devcontainers/features/terraform:1": {},
+    "ghcr.io/devcontainers/features/git-lfs:1": {}
   },
+  "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder} && git config --global pull.rebase true",
   "customizations": {
     "vscode": {
       "extensions": [
